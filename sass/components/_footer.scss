@@ -152,6 +152,7 @@
 }
 
 .footer-button {
+  @extend %button;
   position: relative;
 
   margin-left: 12px;
