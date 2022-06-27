@@ -1,12 +1,14 @@
-
 .clients-list {
-    display: flex;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
   }
-  
-  .clients-list .link {
+
+  &__link {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -14,33 +16,29 @@
     height: 92px;
     border: 1px solid $social-color;
     border-radius: 4px;
-  
+
     transition-property: border, background, color;
     transition-duration: $transition-duration;
     transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $accent-color;
+    }
   }
-  
-  .client-icon {
+
+  &__icon {
     fill: $social-color;
     width: 106px;
     height: 60px;
-  
+
     transition-property: fill;
     transition-duration: $transition-duration;
     transition-timing-function: $timing-function;
+
+    .clients-list__link:hover &,
+    .clients-list__link:focus & {
+      fill: $accent-color;
+    }
   }
-  
-  .clients-list .link:hover,
-  .clients-list .link:focus {
-    border: 1px solid $accent-color;
-  }
-  
-  .clients-list .link:hover .client-icon,
-  .clients-list .link:focus .client-icon {
-    fill: $accent-color;
-  }
-  
-  .clients-list .item:not(:last-child) {
-    margin-right: 30px;
-  }
-  
+}
