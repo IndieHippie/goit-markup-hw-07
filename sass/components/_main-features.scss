@@ -50,22 +50,29 @@
   }
 }
 
-.icon-antenna::before {
-  background-size: 70px;
-  background-image: url("../images/antenna.svg");
+@each $iconName in $iconList {
+  .icon-#{$iconName}::before {
+    background-size: 70px;
+    background-image: url("../images/#{$iconName}.svg");
+  }
 }
 
-.icon-clock::before {
-  background-size: 70px;
-  background-image: url("../images/clock.svg");
-}
+// .icon-antenna::before {
+//   background-size: 70px;
+//   background-image: url("../images/antenna.svg");
+// }
 
-.icon-diagram::before {
-  background-size: 70px;
-  background-image: url("../images/diagram.svg");
-}
+// .icon-clock::before {
+//   background-size: 70px;
+//   background-image: url("../images/clock.svg");
+// }
 
-.icon-astronaut::before {
-  background-size: 70px;
-  background-image: url("../images/astronaut.svg");
-}
+// .icon-diagram::before {
+//   background-size: 70px;
+//   background-image: url("../images/diagram.svg");
+// }
+
+// .icon-astronaut::before {
+//   background-size: 70px;
+//   background-image: url("../images/astronaut.svg");
+// }
